@@ -1,0 +1,22 @@
+﻿@model Student
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>DisplayStudentInfo</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+</head>
+<body>
+    <div class="alert alert-primary" role="alert">
+        <h1>Student Information</h1>
+        <h3>ID: @Model.StdId</h3>
+        <h3>Name: @Model.StdName</h3>
+        <h3>Age: @Model.Age</h3>
+    </div>
+</body>
+</html>

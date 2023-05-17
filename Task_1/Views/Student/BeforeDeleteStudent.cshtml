@@ -1,0 +1,27 @@
+﻿@model Student
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>BeforeDeleteStudent</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+</head>
+<body>
+
+    <div>
+        <div class="alert alert-danger" role="alert">
+            Are you sure you want to delete @Model.StdName
+        </div>
+
+    <form method="post">
+        <input asp-for="StdId" hidden/>
+        <input type="submit" class="btn btn-danger" value="Delete"/>
+    </form>
+    </div>
+</body>
+</html>

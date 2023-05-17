@@ -1,0 +1,22 @@
+﻿@model Department
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>DisplayDepartmentInfo</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+</head>
+<body>
+    <div class="alert alert-primary" role="alert">
+        <h1>Department Information</h1>
+        <h3>ID: @Model.DeptId</h3>
+        <h3>Name: @Model.DeptName</h3>
+        <h3>Manager: @Model.DeptManager.StdName</h3>
+    </div>
+</body>
+</html>

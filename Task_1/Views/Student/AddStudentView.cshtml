@@ -1,0 +1,28 @@
+﻿
+@model Student
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>AddStudentView</title>
+</head>
+<body>
+    <form asp-action="AddNewStudent" asp-controller="Student">
+        <div class="form-floating mb-3">
+            <input asp-for="StdId" class="form-control" id="floatingInput" placeholder="ID">
+        </div>
+        <div class="form-floating">
+          <input asp-for="StdName" class="form-control" id="floatingPassword" placeholder="Student Name">
+        </div>
+        <div class="form-floating">
+          <input asp-for="Age" class="form-control" id="floatingPassword" placeholder="Age">
+        </div>
+        <input type="submit" class="btn btn-success"/>
+    </form>
+</body>
+</html>

@@ -1,0 +1,27 @@
+﻿@model Department
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>AddNewDepartmentView</title>
+</head>
+<body>
+    <form asp-action="AddNewDepartment" asp-controller="Department">
+        <div class="form-floating mb-3">
+            <input asp-for="DeptId" class="form-control" id="floatingInput" placeholder="ID">
+        </div>
+        <div class="form-floating">
+          <input asp-for="DeptName" class="form-control" id="floatingPassword" placeholder="Department Name">
+        </div>
+        <div class="form-floating">
+          <input asp-for="DeptManager.StdName" class="form-control" id="floatingPassword" placeholder="Manager">
+        </div>
+        <input type="submit" class="btn btn-success" value="Add"/>
+    </form>
+</body>
+</html>

@@ -1,0 +1,44 @@
+﻿@model IEnumerable<Department>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+</head>
+<body>
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Manager</th>
+                <th>Operation</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (Department dept in Model)
+            {
+                <tr>
+                    <td>@dept.DeptId</td>
+                    <td>@dept.DeptName</td>
+                    <td>@dept.DeptManager.StdName</td>
+                    <td class="d-flex justify-content-evenly">
+                        <a href="/Department/DisplayDepartmentInfo/@dept.DeptId" class="btn btn-info">Show Details</a>
+                        <a href="/Department/UpdateDepartmentInfo/@dept.DeptId" class="btn btn-secondary">Update</a>
+                        <a href="/Department/BeforeDeleteDepartment/@dept.DeptId" class="btn btn-danger">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <div class="d-flex justify-content-center">
+        <a asp-action = "AddNewDepartmentView" asp-controller = "Department" class="btn btn-primary w-25">Add New Department</a>
+    </div>
+</body>
+</html>

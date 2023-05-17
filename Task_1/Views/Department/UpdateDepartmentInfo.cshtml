@@ -1,0 +1,25 @@
+﻿@model Department
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>UpdateDepartmentInfo</title>
+</head>
+<body>
+    <form method="post">
+        <input asp-for="DeptId" class="form-control" id="floatingInput" value="@Model.DeptId" hidden>
+        <div class="form-floating">
+          <input asp-for="DeptName" class="form-control" id="floatingPassword" value="@Model.DeptName">
+        </div>
+        <div class="form-floating">
+          <input asp-for="DeptManager.StdName" class="form-control" id="floatingPassword" value="@Model.DeptManager.StdName">
+        </div>
+        <input type="submit" class="btn btn-success" value="Update"/>
+    </form>
+</body>
+</html>

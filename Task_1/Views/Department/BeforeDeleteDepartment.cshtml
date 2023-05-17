@@ -1,0 +1,26 @@
+﻿@model Department
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>BeforeDeleteDepartment</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+</head>
+<body>
+    <div>
+        <div class="alert alert-danger" role="alert">
+            Are you sure you want to delete @Model.DeptName
+        </div>
+
+    <form method="post">
+        <input asp-for="DeptId" hidden/>
+        <input type="submit" class="btn btn-danger" value="Delete"/>
+    </form>
+    </div>
+</body>
+</html>
